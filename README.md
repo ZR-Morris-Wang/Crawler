@@ -1,8 +1,8 @@
 # Crawler
 * This is an web-crawling program for the stock price of some category.
-* To run the program you should install denpendencies first by typing
+* To run the program you should install denpendencies first by typing (assuming you already have python installed)
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 Then type the following to run the program
