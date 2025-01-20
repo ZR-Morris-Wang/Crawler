@@ -47,13 +47,13 @@ for records in range(len(Records)):
 # problem: the - sign is not under <span class="Jc(Fe)"></span>, instead, it's under the parent <div> with a different classname from those data with numbers
 
 
-# List = np.reshape(FormattedRecords, (-1, 5))     # making the incoming data as an n by 5 list where the 5 data are that of Records
+List = np.reshape(FormattedRecords, (-1, 5))     # making the incoming data as an n by 5 list where the 5 data are that of Records
 
-# for company in range(CompanyListLength):
-#     print(Company[company].text , " " ,  CompanySymbol[company].text[0:4], " ", SharePrice[company].text, " ", Decimal(float(FormattedSharePrice[company]) - float(List[company, 1])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP) , " " , Decimal((float(FormattedSharePrice[company]) - float(List[company, 1])) / float(List[company, 1]) * 100).quantize(Decimal('.01'), rounding=ROUND_HALF_UP),  "% ", sep = "", end = "")
-#     for data in range(5):       # the 5 Records return
-#         print(List[company, data] , " ", sep = "", end = "")
-#     print("\n")
+for company in range(CompanyListLength):
+    print(Company[company].text , " " ,  CompanySymbol[company].text[0:4], " ", SharePrice[company].text, " ", Decimal(float(FormattedSharePrice[company]) - float(List[company, 1])).quantize(Decimal('.01'), rounding=ROUND_HALF_UP) , " " , Decimal((float(FormattedSharePrice[company]) - float(List[company, 1])) / float(List[company, 1]) * 100).quantize(Decimal('.01'), rounding=ROUND_HALF_UP),  "% ", sep = "", end = "")
+    for data in range(5):       # the 5 Records return
+        print(List[company, data] , " ", sep = "", end = "")
+    print("\n")
 
 
 browser.close()
